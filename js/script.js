@@ -67,6 +67,10 @@ document.getElementById('genera').addEventListener('click', function(){     // 5
 
 // creo una funzione che pulisca i dati al click sul bottone Annulla
 
+document.getElementById('annulla').addEventListener('click', function(){
+    location.reload();
+}
+);
 
 
 
