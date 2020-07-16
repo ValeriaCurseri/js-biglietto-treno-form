@@ -13,26 +13,54 @@
 // ***** funzioni ***** //
 
 // creo una funzione per fare in modo che al click sul bottone Genera
-// 1. compaia #recap
-// 2. si implementi il campo nome-Cognome
-// 3. si generi il numero casuale della carrozza (da 1 a 9)
-// 4. si generi il codice del treno (da 90000 a 99999)
-// 5. si implenti il prezzo del biglietto
 
-document.getElementById('genera').addEventListener('click', function(){
+document.getElementById('genera').addEventListener('click', function(){     // 1. compaia #recap
     var button = document.getElementById('genera');
     var recap = document.getElementById('recap');
     recap.classList.add('display-block');
     recap.classList.remove('display-none');
-    var nomeCognome = document.getElementById('nome-cognome').value;
-    document.getElementById('recap-nome-cognome').innerHTML = nomeCognome;
-    var carrozza = Math.floor((Math.random() * 10) + 0);
-    var codice = Math.floor((Math.random() * 99999) + 90000);
-    document.getElementById('recap-carrozza').innerHTML = carrozza;
-    document.getElementById('recap-codice').innerHTML = codice;
-
 }
 );
+
+document.getElementById('genera').addEventListener('click', function(){     // 2. si implementi il campo nome-Cognome
+    var nomeCognome = document.getElementById('nome-cognome').value;
+    document.getElementById('recap-nome-cognome').innerHTML = nomeCognome;
+}
+);
+
+document.getElementById('genera').addEventListener('click', function(){     // 3. si generi il numero casuale della carrozza (da 1 a 9)
+    var carrozza = Math.floor((Math.random() * 10) + 0);
+    document.getElementById('recap-carrozza').innerHTML = carrozza;
+}
+);
+
+document.getElementById('genera').addEventListener('click', function(){     // 4. si generi il codice del treno (da 90000 a 99999)
+    var codice = Math.floor((Math.random() * 99999) + 90000);
+    document.getElementById('recap-codice').innerHTML = codice;
+}
+);
+
+document.getElementById('genera').addEventListener('click', function(){     // 5. si implementi il prezzo del biglietto
+    var chilometri = document.getElementById('chilometri').value;
+    var eta = document.getElementById('età').value;
+    var prezzo = 0.21 * chilometri;
+    var offerta = 'Biglietto standard';
+    if (eta == 'minorenne'){
+        prezzo *= 0.8;
+        document.getElementById('recap-costo').innerHTML = prezzo;
+        offerta = 'Biglietto scontato per minori di 18 anni';
+        document.getElementById('recap-offerta').innerHTML = offerta;
+    } else if (eta == 'over'){
+        prezzo *= 0.6;
+        document.getElementById('recap-costo').innerHTML = prezzo;
+        offerta = 'Biglietto scontato per over 65';
+        document.getElementById('recap-offerta').innerHTML = offerta;
+    }
+}
+);
+
+
+
 
 
 
