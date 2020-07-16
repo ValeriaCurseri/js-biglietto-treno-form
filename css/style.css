@@ -14,6 +14,8 @@ h3{
     font-weight: bold;
     font-size: 30px;
     color:#000;
+    margin-top:0;
+    margin-bottom:20px;
 }
 
 /* STRUTTURA */
@@ -21,12 +23,15 @@ h3{
 .dati {
     background-color: #fff;
     border-radius: 20px;
-    /* da cancellare */
-    height:300px;
+    padding:0 20px;
+}
+
+#calcola .dati{
+    height:260px;
 }
 
 .dati .form{
-    height:150px;
+    height:130px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -36,22 +41,39 @@ h3{
 
 .form label{
     display:block;
+    font-size: 18px;
 }
 
 .form input, .form select{
     height:30px;
     width: 150px;
     color:#000;
+    border:1px solid tomato;
     border-radius: 5px;
-    border-color: tomato;
 }
 
 .dati .row{
-    height:150px;
+    height:130px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+button{
+    background-color: #fff;
+    border-radius: 5px;
+    border:2px solid tomato;
+    padding: 10px 15px;
+    margin:5px;
+    color: tomato;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: tomato;
+    color: #fff;
+
 }
 
 .display-none {
@@ -63,7 +85,11 @@ h3{
 }
 
 .return{
-    padding:20px;
+    height:300px;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 table{
