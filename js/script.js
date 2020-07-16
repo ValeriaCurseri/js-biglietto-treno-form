@@ -12,12 +12,25 @@
 
 // ***** funzioni ***** //
 
-// creo una funzione per fare in modo che al click sul bottone Genera compaia #recap
+// creo una funzione per fare in modo che al click sul bottone Genera
+// 1. compaia #recap
+// 2. si implementi il campo nome-Cognome
+// 3. si generi il numero casuale della carrozza (da 1 a 9)
+// 4. si generi il codice del treno (da 90000 a 99999)
+// 5. si implenti il prezzo del biglietto
 
 document.getElementById('genera').addEventListener('click', function(){
     var button = document.getElementById('genera');
-    document.getElementById('recap').classList.add('display-block');
-    document.getElementById('recap').classList.remove('display-none');
+    var recap = document.getElementById('recap');
+    recap.classList.add('display-block');
+    recap.classList.remove('display-none');
+    var nomeCognome = document.getElementById('nome-cognome').value;
+    document.getElementById('recap-nome-cognome').innerHTML = nomeCognome;
+    var carrozza = Math.floor((Math.random() * 10) + 0);
+    var codice = Math.floor((Math.random() * 99999) + 90000);
+    document.getElementById('recap-carrozza').innerHTML = carrozza;
+    document.getElementById('recap-codice').innerHTML = codice;
+
 }
 );
 
