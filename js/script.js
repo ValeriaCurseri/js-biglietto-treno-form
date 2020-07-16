@@ -35,7 +35,7 @@ document.getElementById('genera').addEventListener('click', function(){     // 3
 );
 
 document.getElementById('genera').addEventListener('click', function(){     // 4. si generi il codice del treno (da 90000 a 99999)
-    var codice = Math.floor((Math.random() * 99999) + 90000);
+    var codice = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
     document.getElementById('recap-codice').innerHTML = codice;
 }
 );
