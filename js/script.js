@@ -10,6 +10,18 @@
 // Aggiungiamo una piccola animazione al click su "Crea" e "Annulla", se clicchiamo su annulla dobbiamo ripulire il form.
 
 
+// ***** funzioni ***** //
+
+// creo una funzione per fare in modo che al click sul bottone Genera compaia #recap
+
+document.getElementById('genera').addEventListener('click', function(){
+    var button = document.getElementById('genera');
+    document.getElementById('recap').classList.add('display-block');
+    document.getElementById('recap').classList.remove('display-none');
+}
+);
+
+
 
 // ***** ESERCIZIO LEZIONE 3 ***** //
 

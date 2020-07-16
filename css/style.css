@@ -54,6 +54,14 @@ h3{
     align-items: center;
 }
 
+.display-none {
+    display:none;
+}
+
+.display-block{ /* classe per mostrare #recap con js */
+    display:block;
+}
+
 .return{
     padding:20px;
 }
