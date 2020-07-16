@@ -53,3 +53,27 @@ h3{
     justify-content: center;
     align-items: center;
 }
+
+.return{
+    padding:20px;
+}
+
+table{
+    width:100%;
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+}
+
+th, td{
+    width:20%;
+    padding:20px;
+}
+
+th{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+th:first-child, td:first-child{
+    background-color: grey;
+}
