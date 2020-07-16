@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programma per biglietto treno</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="calcola" class="container">
+            <h1 class="text-center text-uppercase">Calcola il prezzo del biglietto</h1>
+            <div class="dati">
+                <div class="form">
+                    <div class="">
+                        <label class="text-center" for="nome-cognome">Nome e Cognome</label>
+                        <input class="text-center" type="text" id="nome-cognome">
+                    </div>
+                    <div class="">
+                        <label class="text-center" for="chilometri">Km da percorrere</label>
+                        <input class="text-center" type="text" id="chilometri">
+                    </div>
+                    <div class="">
+                        <label class="text-center" for="età">Fascia d'età</label>
+                        <select id="età">
+                            <option class="text-center" value="minorenne">Minorenne</option>
+                            <option class="text-center" value="maggiorenne">Maggiorenne</option>
+                            <option class="text-center" value="over">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" name="button" id="genera">Genera</button>
+                    <button type="button" name="button" id="annulla">Annulla</button>
+                </div>
+            </div>
+        </div>
+        <div id="recap" class="container">
+            <h2 class="text-center text-uppercase">Il tuo biglietto</h1>
+            <div class="dati">
+                <h3 class="text-uppercase">Dettaglio passeggeri</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome passeggero</th>
+                            <th>Offerta</th>
+                            <th>Carrozza</th>
+                            <th>Codice CP</th>
+                            <th>Costo biglietto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jill</td>
+                            <td>Smith</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>Jackson</td>
+                            <td>94</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <div id="prezzo-standard"></div>
+        <div id="prezzo-minorenni"></div>
+        <div id="prezzo-over"></div>
+        <div id="prezzo"></div> -->
+        <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+    </body>
+</html>

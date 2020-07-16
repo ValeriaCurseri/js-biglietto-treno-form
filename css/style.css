@@ -1,0 +1,55 @@
+body{
+    background-color: tomato;
+}
+
+/* TIPOGRAFIA */
+
+h1, h2{
+    font-weight: bold;
+    font-size: 40px;
+    color:#fff;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 30px;
+    color:#000;
+}
+
+/* STRUTTURA */
+
+.dati {
+    background-color: #fff;
+    border-radius: 20px;
+    /* da cancellare */
+    height:300px;
+}
+
+.dati .form{
+    height:150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color:tomato;
+}
+
+.form label{
+    display:block;
+}
+
+.form input, .form select{
+    height:30px;
+    width: 150px;
+    color:#000;
+    border-radius: 5px;
+    border-color: tomato;
+}
+
+.dati .row{
+    height:150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
