@@ -52,6 +52,10 @@ h3{
     border-radius: 5px;
 }
 
+.form input:focus, .form select:focus{
+    background-color: tomato;
+}
+
 .dati .row{
     height:130px;
     display: flex;
@@ -73,7 +77,6 @@ button{
 button:hover{
     background-color: tomato;
     color: #fff;
-
 }
 
 .display-none {

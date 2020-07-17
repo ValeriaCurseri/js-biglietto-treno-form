@@ -14,44 +14,60 @@
 
 // creo una funzione attiva al click sul bottone Genera
 
-document.getElementById('genera').addEventListener('click', function(){
-    var button = document.getElementById('genera');                         // 1. compaia #recap
+var genera = document.getElementById('genera');
+
+genera.addEventListener('click', function(){
+
+    // 1. compaia #recap
     var recap = document.getElementById('recap');
     recap.classList.add('display-block');
     recap.classList.remove('display-none');
-    var nomeCognome = document.getElementById('nome-cognome').value;        // 2. si implementi il campo nome-Cognome
+
+    // 2. si implementi il campo nome-Cognome
+    var nomeCognome = document.getElementById('nome-cognome').value;
     document.getElementById('recap-nome-cognome').innerHTML = nomeCognome;
-    var carrozza = Math.floor(Math.random() * 10);                          // 3. si generi il numero casuale della carrozza (da 1 a 9)
+
+    // 3. si generi il numero casuale della carrozza (da 1 a 9)
+    var carrozza = generaRandom(1,10);
     document.getElementById('recap-carrozza').innerHTML = carrozza;
-    var codice = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;   // 4. si generi il codice del treno (da 90000 a 99999)
+
+    // 4. si generi il codice del treno (da 90000 a 99999)
+    var codice = generaRandom(90000,100000);
     document.getElementById('recap-codice').innerHTML = codice;
-    var chilometri = document.getElementById('chilometri').value;           // 5. si implementi il prezzo del biglietto
+
+    // 5. si implementi il prezzo del biglietto
+    var chilometri = document.getElementById('chilometri').value;
     var eta = document.getElementById('età').value;
     var prezzo = 0.21 * chilometri;
-    prezzo = prezzo.toFixed(2);
     var offerta = 'Biglietto standard';
     if (eta == 'minorenne'){
-        prezzo *= 0.8;
+        prezzo -= prezzo * 0.2;
         prezzo = prezzo.toFixed(2);
-        document.getElementById('recap-costo').innerHTML = '€ ' + prezzo;
         offerta = 'Biglietto scontato per minori di 18 anni';
-        document.getElementById('recap-offerta').innerHTML = offerta;
     } else if (eta == 'over'){
-        prezzo *= 0.6;
+        prezzo -= prezzo * 0.4;
         prezzo = prezzo.toFixed(2);
-        document.getElementById('recap-costo').innerHTML = '€ ' + prezzo;
         offerta = 'Biglietto scontato per over 65';
-        document.getElementById('recap-offerta').innerHTML = offerta;
-    } else {
-        document.getElementById('recap-costo').innerHTML = '€ ' + prezzo;
-        document.getElementById('recap-offerta').innerHTML = offerta;
     }
+    document.getElementById('recap-costo').innerHTML = '€ ' + prezzo.toFixed(2);;
+    document.getElementById('recap-offerta').innerHTML = offerta;
 }
 );
 
+// creo una funzione per la generazione random dei numeri
+
+function generaRandom(min,max){
+    return Math.floor(Math.random()*(max - min) + min);
+}
+
 // creo una funzione che pulisca i dati al click sul bottone Annulla
 
-document.getElementById('annulla').addEventListener('click', function(){
-    location.reload();
+var annulla = document.getElementById('annulla');
+
+annulla.addEventListener('click', function(){
+    var recap = document.getElementById('recap');                           // 1. compaia #recap
+    recap.classList.add('display-none');
+    recap.classList.remove('display-block');
+    // location.reload();
 }
 );
